@@ -1,0 +1,13 @@
+import sys
+
+
+def main():
+    start = int(sys.argv[1])
+    end = int(sys.arv[2])
+    with open('01_ytmnd_{}_{}.txt'.format(start, end), 'w') as f:
+        f.write('\n'.join(['ytmnd:{}-{}'.format(i, i+99)
+                           for i in range(start, end, 100)]))
+
+if __name__ == '__main__':
+    main()
+
